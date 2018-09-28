@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="form-container">
+        <form action="{{ path('login') }}" method="post" class="form">
+            <label for="username" class="form--label">Username</label>
+            <input type="text" id="username" name="_username" required value="{{ last_username }}" class="form--input">
+
+            <label for="password" class="form--label">Password</label>
+            <input type="password" id="password" name="_password" required class="form--input">
+
+            <button type="submit" class="form--submit">Sign in</button>
+        </form>
+    </div>
+{% endblock %}

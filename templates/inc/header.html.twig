@@ -1,0 +1,25 @@
+<header class="header">
+    <div class="container flex-wrapper">
+        <a href="{{ path('articles_index') }}" class="logo">Trial App</a>
+        <nav class="nav">
+            <ul class="nav--menu">
+                {% if is_granted('ROLE_USER') %}
+                    <li class="nav--menu__item">
+                        <a href="{{ path('add_article') }}"><i class="fas fa-pencil-alt"></i>Add article</a>
+                    </li>
+                    <li class="nav--menu__item">
+                        <a href="{{ path('logout') }}">Sign out</a>
+                    </li>
+                {% else %}
+                    <li class="nav--menu__item">
+                        <a href="{{ path('register') }}">Sign up</a>
+                    </li>
+                    <li class="nav--menu__item">
+                        <a href="{{ path('login') }}">Sign in</a>
+                    </li>
+                {% endif %}
+            </ul>
+        </nav>
+    </div>
+</header>
+

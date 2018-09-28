@@ -1,0 +1,45 @@
+*, *:before, *:after{
+  outline: 0;
+  box-sizing: border-box;
+}
+body{
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  -webkit-font-smoothing: antialiased;
+  color: #131516;
+}
+.container{
+  width: 1440px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+.flex-wrapper{
+  display: flex;
+}
+a{
+  text-decoration: none;
+  transition: all .3s;
+  color: #131516;
+}
+.main{
+  padding: 40px 0;
+  min-height: calc(100vh - 70px - 60px);
+}
+
+h1, h2, h3{
+  font-weight: 500;
+}
+h1{
+  font-size: 30px;
+  line-height: 30px;
+}
+h2{
+  font-size: 24px;
+  line-height: 30px;
+}
+h3{
+  font-size: 20px;
+  line-height: 20px;
+}

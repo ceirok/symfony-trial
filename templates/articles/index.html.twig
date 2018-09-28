@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="articles-container">
+
+        {% for article in articles %}
+            <article class="article-wrapper">
+                <a href="" class="article">
+                    <div class="article--image">
+                        <img src="{{ asset('images/' ~ article.image) }}" alt="title">
+                        <a href=""><i</i></a>
+                    </div>
+                    <div class="article--body">
+                        <div class="article--meta">
+                            <span class="article--meta__date">{{ article.date|date("d.m.y - h:i") }}</span>
+                            <span class="article--meta__category">{{ article.category.name }}</span>
+                        </div>
+                        <h3>{{ article.title }}</h3>
+                        <p class="article--body__intro">
+                            {{ article.text }}
+                        </p>
+                    </div>
+                </a>
+            </article>
+        {% endfor %}
+    </div>
+{% endblock %}
+

@@ -1,0 +1,20 @@
+#index:
+#    path: /
+#    controller: App\Controller\ArticlesController::index
+#    defaults:
+
+articles_index:
+    path: /
+    controller: App\Controller\ArticlesController::index
+login:
+    path: /login
+    controller: App\Controller\SecurityController::login
+register:
+    path: /register
+    controller: App\Controller\RegistrationController::register
+logout:
+    path: /logout
+    controller: App\Controller\SecurityController::logout
+add_article:
+    path: /add
+    controller: App\Controller\ArticlesController::add
